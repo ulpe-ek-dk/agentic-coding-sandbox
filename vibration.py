@@ -20,4 +20,13 @@ def classify(vibration: float) -> str:
 
     Se issue #1.
     """
-    raise NotImplementedError("classify er ikke implementeret endnu (issue #1)")
+    if vibration < 0:
+        # En negativ vibration er fysisk meningsløs og tyder på en fejl i data,
+        # så vi afviser den i stedet for at kalde den "normal".
+        raise ValueError(f"Vibration kan ikke være negativ: {vibration} mm/s")
+    if vibration > CRITICAL_MM_S:
+        return "critical"
+    # Genbrug is_anomaly, så advarselsgrænsen kun vurderes ét sted.
+    if is_anomaly(vibration):
+        return "warning"
+    return "normal"
