@@ -19,7 +19,6 @@ en advarselsgrænse og en kritisk grænse.
 
 **Hvorfor:** Kontrolcentret skal kunne se, om en vibrationsmåling er normal, forhøjet
 eller kritisk. Grænseværdierne er fastsat af kontrolcentret i Aalborg.
-Kilde: issue #1, PR #2, docstring i `classify`.
 
 **Implementering:**
 - Kode: `classify`, `is_anomaly`, `WARNING_MM_S` og `CRITICAL_MM_S` i `vibration.py`
@@ -35,7 +34,6 @@ med en fejl.
 
 **Hvorfor:** En negativ vibration er fysisk meningsløs og tyder på en fejl i data.
 Den må ikke ende med at blive kaldt "normal".
-Kilde: issue #1, PR #2, kommentar i `classify`.
 
 **Implementering:**
 - Kode: `classify` i `vibration.py`
@@ -50,7 +48,6 @@ critical.
 
 **Hvorfor:** En så høj måling er fysisk umulig for gearkassen. Den skyldes en defekt
 sensor, ikke en defekt mølle, og må derfor ikke klassificeres som critical.
-Kilde: issue #3, PR #4, kommentarer i `vibration.py`.
 
 **Implementering:**
 - Kode: `classify`, `is_sensor_fault` og `SENSOR_FAULT_MM_S` i `vibration.py`
@@ -66,8 +63,6 @@ ligger over advarselsgrænsen.
 
 **Hvorfor:** Målingen siger intet om møllen. En defekt sensor må ikke udløse en alarm
 for en mølle, der måske er i orden.
-Kilde: issue #3 og PR #4. Reglen var ikke en del af acceptkriterierne i #3, men blev
-tilføjet i PR #4 og eksplicit godkendt i review. Se også docstring i `is_anomaly`.
 
 **Implementering:**
 - Kode: `is_anomaly` og `is_sensor_fault` i `vibration.py`
