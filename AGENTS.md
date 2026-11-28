@@ -36,6 +36,11 @@ Er der en konflikt mellem dem, så stop og spørg i stedet for at vælge selv.
 - Tilføj ingen nye afhængigheder.
 - Skriv kommentarer og docstrings på dansk, og forklar hvorfor, ikke kun hvad.
 
+## Domæneregler og begreber
+
+- Ændrer du en forretningsregel, skal `docs/domain-rules.md` og en test opdateres i samme PR.
+- Nye domænebegreber tilføjes til `docs/glossary.md`.
+
 ## Git og sikkerhed
 
 - Push aldrig direkte til `main`, og brug aldrig `git push --force`.

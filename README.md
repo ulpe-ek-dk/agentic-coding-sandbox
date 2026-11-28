@@ -5,7 +5,8 @@ kontrolleret arbejdsgang: issue → branch → plan → implementering → `make
 pull request → review → merge.
 
 Domænet er en forenklet udgave af casen Intelligent IoT Solutions A/S: vibrationsmålinger
-fra gearkasser i vindmøller klassificeres som normal, warning eller critical.
+fra gearkasser i vindmøller klassificeres som normal, warning, critical eller sensor_fault.
+Reglerne og begrundelserne står i `docs/domain-rules.md`, og begreberne i `docs/glossary.md`.
 
 ## Kom i gang
 
@@ -32,6 +33,8 @@ make check   # lint og test
 | `.github/pull_request_template.md` | Skabelon til pull requests |
 | `.github/ISSUE_TEMPLATE/opgave.md` | Skabelon til issues |
 | `.github/workflows/ci.yml` | CI, der kører `make check` |
+| `docs/domain-rules.md` | Forretningsreglerne og hvorfor de findes |
+| `docs/glossary.md` | Domænets begreber og deres navne i koden |
 | `docs/ISSUES.md` | Forslag til de første øvelser |
 
 ## Arbejde med en agent
