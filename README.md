@@ -36,20 +36,3 @@ make check   # lint og test
 | `docs/domain-rules.md` | Forretningsreglerne og hvorfor de findes |
 | `docs/glossary.md` | Domænets begreber og deres navne i koden |
 | `docs/ISSUES.md` | Forslag til de første øvelser |
-
-## Arbejde med en agent
-
-Start Claude Code i roden af repoet:
-
-```bash
-claude
-```
-
-Første prompt i en ny session:
-
-> Læs AGENTS.md og CONTRIBUTING.md. Fortæl mig kort, hvilke regler du arbejder efter,
-> og hvilke kommandoer du må bruge. Ændr ingen filer endnu.
-
-Derefter:
-
-> Løs issue #1. Lav først en plan, og vent på min godkendelse.
